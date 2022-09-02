@@ -5,25 +5,32 @@ When trying to decide what type of data to use for our final project, we determi
 
 ## Data Source Description
 The original data file can be found on Kaggle at this link https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
-The full data set includes city of Austin, Texas crime data from the year 2003 through July 2021.  We will focus on data from 2019 (baseline) to July 2021, with March 2020 through March 2021 being considered the "pandemic year."  
+The full data set includes city of Austin, Texas crime data from the year 2003 through July 2021.  We will focus on data from three distinct time periods:
+Baseline: March 10, 2019 thru March 10, 2020
+Pandemic Year: March 11, 2020 thru March 11, 2021
+Post Pandemic: March 12, 2021 to July 2021
 
 ## Questions to Explore
 We want to answer the following questions: 
-- Did all categories of crime increase during the pandemic year?
+- Did all categories of crime increase during the pandemic year?  
 - Did crime return to baseline after the pandemic year closed?
+- Did zip codes in Austin with the highest number(s) of positive covid results see a resulting increase or decrease in the crime rate for that zip code?
 
-## Communication Protocol
+##  Communication Protocol
 - We will use Slack (group) direct message as our primary means of communication. 
-- We will meet via Zoom XX times per week; schedule ***********************
-- Daily check-in via Slack at XX:XX am/pm ........................
-- In case of emergency, ...................... 
+- We will meet via Zoom, as needed.
+- We will reach out via Slack when we need assistance from our Team.
+- In case of emergency, message the group on Slack.
 
-## Roles
 
-![image](https://user-images.githubusercontent.com/102322707/187516330-a72c1a5b-bc2c-4614-81da-5c810e984bc5.png)
+## Roles & Team Members
+
+
 
 
 ## Resources
 https://www.ajmc.com/view/a-timeline-of-covid19-developments-in-2020
 
-https://open.texas.gov/#:~:text=Effective%20Wednesday%2C%20March%2010%2C%202021,statewide%20mask%20mandate%20in%20Texas.
+https://open.texas.gov/#:~:text=Effective%20Wednesday%2C%20March%2010%2C%202021,statewide%20mask%20mandate%20in%20Texas
+
+https://www.austintexas.gov/sites/default/files/files/Health/Order%20No%2020220323-37%20%20-%20Notice%20of%20Termination%20of%20Health%20Authority%20Rules.pdf
