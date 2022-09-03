@@ -14,7 +14,7 @@ We want to answer the following questions:
 
 ## Communication Protocol
 - We will use Slack (group) direct message as our primary means of communication. 
-- We will meet via Zoom XX times per week; schedule ***********************
+- We will meet via Zoom on an as needed basis. These additonaly meetings will be communicated through the Slack Group message.
 - Daily check-in via Slack at XX:XX am/pm ........................
 - In case of emergency, ...................... 
 
@@ -27,3 +27,6 @@ We want to answer the following questions:
 https://www.ajmc.com/view/a-timeline-of-covid19-developments-in-2020
 
 https://open.texas.gov/#:~:text=Effective%20Wednesday%2C%20March%2010%2C%202021,statewide%20mask%20mandate%20in%20Texas.
+
+
+https://atc-covid19data-austin.hub.arcgis.com/datasets/austin-travis-zip-code-counts-public-view/explore
