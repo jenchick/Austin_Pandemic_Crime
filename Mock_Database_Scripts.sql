@@ -1,11 +1,12 @@
 CREATE TABLE mock_original_crimedata (
- incident_number INT PRIMARY KEY UNIQUE,
+ incident_number INT PRIMARY KEY NOT NULL,
  bb INT,
  cc TEXT,
  dd INT,
  dates DATE,
  ff INT,
- gg INT
+ gg INT,
+ UNIQUE (dates)
 );
 
 CREATE TABLE mock_covid_zipcodes (
