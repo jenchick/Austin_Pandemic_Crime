@@ -4,11 +4,14 @@
 When trying to decide what type of data to use for our final project, we determined that we all had an interest in crime data.  In addition, we wanted to analyze recent crime data and were curious as to how the pandemic affected crime in Austin, Texas.
 
 ## Data Source Description
-The original data file can be found on Kaggle at this link https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
+The original data file for the Austin crime data can be found on Kaggle at this link: https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
 The full data set includes city of Austin, Texas crime data from the year 2003 through July 2021.  We will focus on data from three distinct time periods:
 Baseline: March 10, 2019 thru March 10, 2020
 Pandemic Year: March 11, 2020 thru March 11, 2021
 Post Pandemic: March 12, 2021 to July 2021
+
+The original data file for the Austin Covid cases by zip code can be found at the following link: https://atc-covid19data-austin.hub.arcgis.com/
+This data set originates with the City of Austin as an Austin - Travis County Public Dataset where all numbers are provisional and subject to change.
 
 ## Questions to Explore
 We want to answer the following questions: 
@@ -23,9 +26,12 @@ We want to answer the following questions:
 - In case of emergency, message the group on Slack.
 
 
-## Roles & Team Members
-
-
+## Team Members
+Gabrielle Fechter
+Jennifer Chickowski
+Josh Trewhella
+Mark Jonse
+Zachary Simon
 
 
 ## Resources
