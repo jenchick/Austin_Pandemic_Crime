@@ -6,7 +6,7 @@ Python, Pandas, Jupyter Notebook
 SQL, postgres
 
 ## Machine Learning
-SciKitLearn, Logistic Regression, Decision Trees
+SciKitLearn, Linear Regression, RandomForest
 
 ## Dashboard
 Tableau
