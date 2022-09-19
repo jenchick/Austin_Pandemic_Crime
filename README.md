@@ -44,6 +44,12 @@ Mark Jonse
 
 Zachary Simon
 
+## Machine Learning
+Three models are being utilized for this project. The goal of the project is to determine if covid rates impacted crime rates in Austin. As a baseline, a linear regression model was created for 2019. The independent variables are zipcode and date and the dependent variable is crime (incident_number). Then, a second linear regression model was created for 2020. The independent variables for 2020 are zipcode, date, and covid rates (rates), and the dependent variable is crime (incident_number). The third model, a logistic regression model is being used to predict crime as increasing or decreasing by zipcode. The indepdent variable is covid rate (rates) and the dependent variable is crime rate (incident number). 
+
+Initially, the data included covid rates by per month. However, for both the 2020 linear regression model and the logistic regression model, the indiviudal month columns were combined into a single month column - "rates." Additionally, NaNs were dropped. For the 2019 model, the date column was converted from an object to an integer. 
+
+The biggest challenge has been connecting the databse to the models. 
 
 ## Resources
 https://www.ajmc.com/view/a-timeline-of-covid19-developments-in-2020
