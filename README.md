@@ -10,14 +10,7 @@
 ### Reason for Selecting this Topic
 When trying to decide what type of data to use for our final project, we determined that we all had an interest in crime data.  In addition, we wanted to analyze recent crime data and were curious as to how the pandemic affected crime in Austin, Texas.
 
-### Questions to Explore
-We want to answer the following questions: 
-- Did all categories of crime rise, fall, or stay the same during the pandemic year?  
-- If a category of crime was affected during the pandemic, did it crime return to baseline after the pandemic year closed?
-- Did zip codes in Austin with the highest number(s) of positive covid results see a resulting increase or decrease in the crime rate for that zip code?
-
-## Process
-### Data Collection & Preparation
+### Description of Data Sources
 The original data file for the Austin crime data can be found on Kaggle at this link: 
 https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
 
@@ -34,13 +27,23 @@ https://atc-covid19data-austin.hub.arcgis.com/
 
 This data set originates with the City of Austin as an Austin - Travis County Public Dataset where all numbers are provisional and subject to change.
 
+### Questions to Explore
+We want to answer the following questions: 
+- Did all categories of crime rise, fall, or stay the same during the pandemic year?  
+- If a category of crime was affected during the pandemic, did it crime return to baseline after the pandemic year closed?
+- Did zip codes in Austin with the highest number(s) of positive covid results see a resulting increase or decrease in the crime rate for that zip code?
+
+### Data Exploration Phase
+
+
+
 
 ![image](https://user-images.githubusercontent.com/102322707/191340310-902ab2e4-e517-4565-ae4e-6f6725b7ffc1.png)
 
 Note:  Additional Zip Codes included, but not shown.
 
-### Data Exploration & Analysis
 
+### Analysis Phase
 #### Machine Learning Models
 Three models are being utilized for this project. The goal of the project is to determine if covid rates impacted crime rates in Austin. As a baseline, a linear regression model was created for 2019. The independent variables are zipcode and date and the dependent variable is crime (incident_number). Then, a second linear regression model was created for 2020. The independent variables for 2020 are zipcode, date, and covid rates (rates), and the dependent variable is crime (incident_number). The third model, a logistic regression model is being used to predict crime as increasing or decreasing by zipcode. The indepdent variable is covid rate (rates) and the dependent variable is crime rate (incident number). 
 
@@ -48,10 +51,6 @@ Initially, the data included covid rates by per month. However, for both the 202
 
 The biggest challenge has been connecting the databse to the models. 
 
-
-
-## Conclusion
-TBD
 
 ## Team Members
 
