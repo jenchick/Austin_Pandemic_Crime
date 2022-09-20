@@ -33,12 +33,18 @@ We want to answer the following questions:
 
 ## Data Exploration Phase
 
+The crime and covid data was cleaned and formatted using Python, Pandas, and Jupiter Notebook.
 
+The crime and covid data tables were created using SQL and postgres.  The covid tables were pivoted on year and zip code. The import function was used to populate tables.
 
 
 ![image](https://user-images.githubusercontent.com/102322707/191340310-902ab2e4-e517-4565-ae4e-6f6725b7ffc1.png)
 
-Note:  Additional Zip Codes included, but not shown.
+*Note:  Additional Zip Codes included, but not shown.*
+
+A connection string was created using SQLAlchemy.
+
+
 
 Tableau will be used to create the dashboard from the exported CSV files.
 Interactive elements will include heat maps for crime and covid cases filterable by zip code, crime types, and year.
