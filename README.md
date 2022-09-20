@@ -34,6 +34,11 @@ https://atc-covid19data-austin.hub.arcgis.com/
 
 This data set originates with the City of Austin as an Austin - Travis County Public Dataset where all numbers are provisional and subject to change.
 
+
+![image](https://user-images.githubusercontent.com/102322707/191340310-902ab2e4-e517-4565-ae4e-6f6725b7ffc1.png)
+
+Note:  Additional Zip Codes included, but not shown.
+
 ### Data Exploration & Analysis
 
 #### Machine Learning Models
