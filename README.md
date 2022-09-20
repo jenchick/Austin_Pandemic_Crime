@@ -12,12 +12,12 @@ When trying to decide what type of data to use for our final project, we determi
 
 ### Questions to Explore
 We want to answer the following questions: 
-- Did all categories of crime increase during the pandemic year?  
-- Did crime return to baseline after the pandemic year closed?
+- Did all categories of crime rise, fall, or stay the same during the pandemic year?  
+- If a category of crime was affected during the pandemic, did it crime return to baseline after the pandemic year closed?
 - Did zip codes in Austin with the highest number(s) of positive covid results see a resulting increase or decrease in the crime rate for that zip code?
 
 ## Process
-### Data Collection
+### Data Collection & Preparation
 The original data file for the Austin crime data can be found on Kaggle at this link: 
 https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
 
@@ -34,20 +34,19 @@ https://atc-covid19data-austin.hub.arcgis.com/
 
 This data set originates with the City of Austin as an Austin - Travis County Public Dataset where all numbers are provisional and subject to change.
 
-### Data Preparation
+### Data Exploration & Analysis
 
-### Machine Learning Models
+#### Machine Learning Models
 Three models are being utilized for this project. The goal of the project is to determine if covid rates impacted crime rates in Austin. As a baseline, a linear regression model was created for 2019. The independent variables are zipcode and date and the dependent variable is crime (incident_number). Then, a second linear regression model was created for 2020. The independent variables for 2020 are zipcode, date, and covid rates (rates), and the dependent variable is crime (incident_number). The third model, a logistic regression model is being used to predict crime as increasing or decreasing by zipcode. The indepdent variable is covid rate (rates) and the dependent variable is crime rate (incident number). 
 
 Initially, the data included covid rates by per month. However, for both the 2020 linear regression model and the logistic regression model, the indiviudal month columns were combined into a single month column - "rates." Additionally, NaNs were dropped. For the 2019 model, the date column was converted from an object to an integer. 
 
 The biggest challenge has been connecting the databse to the models. 
 
-### Analysis
 
 
-### Conclusion
-
+## Conclusion
+TBD
 
 ## Team Members
 
