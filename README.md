@@ -46,11 +46,9 @@ A connection string was created using SQLAlchemy.
 
 
 
-Tableau will be used to create the dashboard from the exported CSV files.
-Interactive elements will include heat maps for crime and covid cases filterable by zip code, crime types, and year.
-Regressions for individual years will also be present.  Here is a mockup of our dashboard:
-
-![image](https://user-images.githubusercontent.com/102322707/191350531-98b6fa80-515b-4dd2-bae6-bc7444a4cd85.png)
+Tableau was used to create the dashboard from the exported CSV files.
+Interactive elements include heat maps for the pandemic and post-pandemic crime and covid cases filterable by zip code and month.
+Regressions for individual years is also present.  [Tableau Dashboard](https://public.tableau.com/app/profile/zach1542/viz/Austin_Pandemic_v_Crime/Dashboard1) 
 
 
 
