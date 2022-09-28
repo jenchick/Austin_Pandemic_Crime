@@ -27,8 +27,7 @@ This data set originates with the City of Austin as an Austin - Travis County Pu
 
 ### Questions to Explore
 We want to answer the following questions: 
-- Did all categories of crime rise, fall, or stay the same during the pandemic year?  
-- If a category of crime was affected during the pandemic, did it crime return to baseline after the pandemic year closed?
+- Did covid rates cause crime rates to increase or decrease in Austin? 
 - Did zip codes in Austin with the highest number(s) of positive covid results see a resulting increase or decrease in the crime rate for that zip code?
 
 ## Data Exploration Phase
