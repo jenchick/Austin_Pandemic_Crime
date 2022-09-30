@@ -15,11 +15,9 @@ The original data file for the Austin crime data can be found on Kaggle at this 
 https://www.kaggle.com/datasets/sdallman/austin-crime-report-200372021
 The full data set includes city of Austin, Texas crime data from the year 2003 through July 2021.  We will focus on data from three distinct time periods:
 
-- Baseline: March 10, 2019 thru March 10, 2020
+- Baseline: March 2019 through December 2019
 
-- Pandemic Year: March 11, 2020 thru March 11, 2021
-
-- Post Pandemic: March 12, 2021 to July 2021
+- Pandemic: March 2020 - December 2021
 
 The original data file for the Austin Covid cases by zip code can be found at the following link: 
 https://atc-covid19data-austin.hub.arcgis.com/
