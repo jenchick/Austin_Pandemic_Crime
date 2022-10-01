@@ -53,26 +53,94 @@ Regressions for individual years is also present.  [Tableau Dashboard](https://p
 
 
 
-## Analysis Phase
-### Machine Learning Models
-The goal of this project is to examine the impact of Covid-19 on crime rates in Austin. Three models are being utilized for this project. 
+## Analysis Phase - Machine Learning 
+The goal of this project is to examine the impact of Covid-19 on crime rates in Austin. To answer the questions this project is exploring, four models were created. 
 
-Linear regression is the selected model type for the first two models. Linear regression was chosen as the first two models are trying to predict if zip code (and Covid rate) can predict crime rate. The first is a linear regression model with the feature variable as zip code and the target variable as crime rates. The purpose of this model is to establish if zip code is a significant predictor of crime rate. This model allows establishes a baseline for the other linear regression model. For this model, the data used contained the zip code and crime rate per month for each zip code. The individual month/crime rate columns were combined into a singular column called “crime_rates.” To keep this model similar to the model for 2020, the crime rates column does not include data from January or February 2021, and therefore, the timeframe for this model was March 2019 to December 2019. The r-squared value for this model was 0.037. This indicates that zip code did not have a significant impact on crime. The values indicate that less than 1% of the variability in the target variable (crime rate) is explained by the regression. Therefore, the baseline is that zip code did not significantly explain crime in this model. 
+Description of data preprocessing: 
+- The tables were read into jupyter notebook 
+- Data types were checked 
+- Null values were replaced with "0" in the 2019 crime rate column in the Logistic Regression Model
 
-![image](https://user-images.githubusercontent.com/102322707/193416088-ebd1eb6c-e1ac-4601-8664-f5bd7d5139b9.png)
+Description of feature engineering and the feature selection, including the decision-making process:
+- For the 2019 regression model:
+  - Zipcode was converted to a numeric form using label encoding (feature variable) 
+  - The individual month crime rate columns were combined into a singular crime rate column (target variable)*
+- For the 2020 models(linear regression and multiple linear regression):
+  - The individual month covid rate columns were combined into a singular covid rate column (feature variable)*
+  - Zipcode  was converted to a numeric form using label encoder (feature variable)
+  - The individual month crime columns were combined into a singular crime rate column (target variable)*
+- For the logistic regression model: 
+  - The individual month covid rate columns were combined into a singular covid rate column  (feature variable) 
+  - The individual month crime rate columns were combined into a singular crime rate column for 2020 and 2021 
+  - The individual 2019-month crime rate columns were combined into a singular 2019 crime rate column
+  - Using np.where, a new column ("outcomes") was created that stated if crime increased or decreased in 2020/2021 from the crime rate in 2019 per zip code and then used "replace" to replace "1" with "yes" and "0" with no
+<img width="1026" alt="Screen Shot 2022-10-01 at 12 56 06 PM" src="https://user-images.githubusercontent.com/103774401/193422114-6f5b6c51-74eb-480a-b588-5d5be95b3d90.png">
+ <img width="849" alt="Screen Shot 2022-10-01 at 12 55 42 PM" src="https://user-images.githubusercontent.com/103774401/193422193-3a8c79e8-11da-49b6-9739-ed2f6874a2f1.png">
 
+- A new data frame was created that contained the following columns: 
+  - Zipcode
+  - Covid_rates
+  - Crime_rates
+  - 2019crime_rates
+  - Outcomes
 
-The second model - a multiple linear regression model is used to examine 2020. The purpose of this model is to establish if Covid and zip code are significant predictors of crime rate. Similar to the model for 2019, the individual month/crime rates were combined into a singular column called “crime_rates.” This process was repeated for the month/ Covid rate columns - the individual columns were combined into a single-use column called “covid_rates.” The timeframe for this model spans from March 2020 to December 2020. A linear regression model with Covid rates as the feature variable and crime rates as the target variable was created before the multiple linear regression model. The r-squared score for the Covid/crime regression is 0.496, which indicates that 49.6% of crime rate variance was explained by covid rates. This model was used just to see the relationship between only Covid rates and crime rates. A correlation plot was created to show the correlation between zip code, crime, and covid. The multiple linear regression model with zip code and Covid rates as the feature variables and crime rates as the target variable was used to see if Covid and zip code were strong predictors of crime rate. The r-squared value for the multiple linear regression model is 0.50, which means 50% of crime rate variance can be explained by Covid rate and zip code. The linear regression models indicate that zip code is not a significant predictor of crime. Covid rate is a better predictor of crime rate than zip code. When examining the correlation plot, there is further support for this as the correlation between covid rate and crime rate is 0.72 whereas the correlation between zip code and crime is 0.17. 
+Description of how data was split into training and testing sets
+- The train size for all of the models was 0.70 - this means 70% of the data was used to train the models.
+- The solver used for the logistic regression model was "lbfgs"
+- For the 2019 model, X was set as "zipcode" and y was set as "crime_rates"
+- For the 2020 covid-crime model, x was set as "covid_rates" and y was set as "crime_rates"
+- For the 2020 zipcode- covid-crime model, x was set as "zipcode" and "covid_rates" and y was set as "crime_rates"
+- For the logistic regression model, x was set as "covid_rates" and y was set as "outcomes"
 
-![image](https://user-images.githubusercontent.com/102322707/193416157-d8a7f239-51c1-4116-b2bb-30f35feea8bd.png)
+Explanation of model choice, including limitations and benefits:
+- This project utilized linear regression models and a logistic regression model 
+- Supervised learning was used as the data included labels 
+- Linear regression, or multiple linear regression, was used to predict the strength of a relationship between an independent and dependent variable 
+- Linear regression can show correlation but it does not tell the full picture of what factors cause crime rates to increase
+- Logistic regression was chosen to predict binary outcomes - increase/decrease in crime based on covid rate
+- One disadvantage of logistic regression is cannot predict continuous variables
 
+Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
+- There were no changes in model choice 
 
-The third model utilized is a logistic regression model. This model is a simple classification model and is used to predict if crime increased or decreased by zip code. Logistic regression was specifically selected as the goal is to predict if crime increased or decreased by zip code, which is a binary classification problem. For this model, a 2020 table and a 2021 table were combined. The tables included zip code and crime and covid rates per month. A new column, “covid_rates”, was created by combining the Covid rates for each month for both 2020 and 2021. The same process was used in a crime rates column which included crime rates for each month for both 2020 and 2021. The target variable is the crime rate, and the feature variables is covid. The data was then split and scaled. The train size for this model is currently 0.70 or 70%. The accuracy score of this model is 0.77. Additional efforts will be made to increase the accuracy score by changing the random state and train size. 
+Description of how the model was trained (or retrained, if the team is using an existing model)
+- Initially, zip code was not converted to a numeric value. However, zip code was converted to a numeric value for the final models
+- The Segment 2 logistic regression model did not include an "outcomes" column. This was done in error as logistic regression cannot intake continuous data, and so an "outcomes" column was created for the Segment 3 model
+- In the Segment 3 model, the accuracy score of the model was 77%, which is a pretty good performance. The random state was set to 75 for Segment 3, but it was increased to 100 for the final model. This led to an increased accuracy score of 86% which is an even better model performance 
 
-![image](https://user-images.githubusercontent.com/102322707/193416199-35aa37f4-91d0-4887-bb9c-80626a25ca8b.png)
+Description and explanation of model's confusion matrix, including final accuracy score
+- 2019 Linear Regression Model:
+  - R-squared value: 0. 062
+  - Zipcode does not appear to be a strong predictor of crime rate variance 
+  <img width="708" alt="Screen Shot 2022-09-29 at 8 59 19 PM" src="https://user-images.githubusercontent.com/103774401/193421955-c0aa2759-5ff1-4d5f-a635-c0461acad965.png">
+- 2020 Covid/Crime Linear Regression Model:
+  - R-squared value: 0.49
+  - Covid-rate explained 49% of crime rate variance
+  <img width="610" alt="Screen Shot 2022-09-29 at 9 00 11 PM" src="https://user-images.githubusercontent.com/103774401/193421928-ff0f3b56-89ed-4987-bac8-c5b6ab94449e.png">
+- 2020 Zip code/Covid/Crime Linear Regression Model:
+  - R-squared value: 0.55
+  - Zip code and covid rate explained 55% of crime rate variance
+- Correlation Plot:
+     - Covid and crime are more strongly correlated than zip code and crime
+![2020 Correlation Plot](https://user-images.githubusercontent.com/103774401/193421869-894b4472-6f51-4c6b-ab45-5dda625cc150.png)
+
+- Logistic Regression Model:
+  - Confusion Matrix Display:
+  <img width="616" alt="Confusion Matrix Display" src="https://user-images.githubusercontent.com/103774401/193421854-93a9494c-0740-42ef-9a71-6f0bcf53f742.png">
+
+  - For zipcodes where crime decreased, the model predicted 13 crime rate decreases correctly and 2 crime rate decreases incorrectly 
+  - For zipcodes where crime increased, the model predicted 6 crime rate increases correctly and 2 crime rate increases incorrectly 
+- Classification Report:
+<img width="613" alt="Screen Shot 2022-09-28 at 9 14 44 PM" src="https://user-images.githubusercontent.com/103774401/193421774-e017a23b-1019-462e-b2a7-dcac7ca1fe75.png">
+   - Final accuracy score: 86% 
 
 ## Conclusion & Recommendations
-Although we found that Covid rate is a better predictor of crime rate than zip code, it appears that we could better understand the relationship between these variables by possibly including census data, predicting future crime rate trends through a time-series analysis, and diving deeper to examine specific categories of crime independently.  In addition, if we had more post-pandemic shut down data, we may be able to discover more significant trends.
+
+This project found zip code and crime can predict crime rate variance. However, covid rate appears to be a stronger predictor of crime rate. The one note about this is that zipcode is a difficult variable to use, and it should be cautioned that zipcode can still be a strong predictor of crime in general - it was just not a strong predictor in this project. 
+
+Overall, crime rates decrease in Austin in 2020/2021 compared to 2019. Crime rate decreased in 40 of the 71 zip codes in Austin. However, this means crime increased in 31 zip codes in Austin. In the zip codes where crime rate did increase, the majority of these zip codes had fairly high covid rates. For example, in 78704, the covid rate for 2020 and 2021 was 1,100,047, and crime rate significantly increased between 2019 and 2020/2021 (crime increased from 2,006 crimes to 4,006 crimes). However, not every zipcode that had high covid rates saw an increase in crime. For example, in 78660, covid rate for 2020/2021 was 2,942,560, but crime rate did not increase - crime rate dropped from 1,352 in 2019 to 490 in 2020/2021. It is important to note that crime rate data may not be 100% accurate - all crimes are not reported. 
+
+It appears as if covid rate did cause an increase in crime rate, at least to some degree. However, there are most likely other factors that caused crime rate variance. This project would benefit from Census data to identify other variables that can explain crime rate variance. Additionally, it would be beneficial to examine crime type. Potential beneficial changes to this project would be to do a time series forecast to predict future crime rates, and this project would benefit from more data. It is difficult to make accurate assessments with only two years of data. These changes could lead to discovering more significant trends. 
 
 
 ## Team Members
