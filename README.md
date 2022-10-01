@@ -71,6 +71,8 @@ The third model utilized is a logistic regression model. This model is a simple 
 
 ![image](https://user-images.githubusercontent.com/102322707/193416199-35aa37f4-91d0-4887-bb9c-80626a25ca8b.png)
 
+## Conclusion & Recommendations
+Although we found that Covid rate is a better predictor of crime rate than zip code, it appears that we could better understand the relationship between these variables by possibly including census data, predicting future crime rate trends through a time-series analysis, and diving deeper to examine specific categories of crime independently.  In addition, if we had more post-pandemic shut down data, we may be able to discover more significant trends.
 
 
 ## Team Members
